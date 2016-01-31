@@ -7,22 +7,32 @@
 /* CONTENT AREA */
 .content-area {
 	background: #fff;
-	background: hsl(0, 0%, 100%);
 }
 
 .section-title {
-    margin-top: .5rem;
-    margin-bottom: 3rem;
-    font-weight: bold;
     font-size: 30px;
     font-size: 3rem;
     line-height: 1.2em;
 }
 				
+/*Call to Action*/ 
+#call-to-action {
+    color: #fff;
+    padding: 4rem 0;
+}
+
+/*HEADER IMAGE*/
+.call-to-action-background-image{
+	 background: no-repeat right center;
+	 background-size: cover;
+	 min-height: 400px;
+}
+
+
 /*WHAT*/ 
 #what {
     color: #fff;
-    background: #8abf5e;
+    background: #404040;
     padding: 4rem 0;
 }
 
@@ -32,24 +42,24 @@
     background: hsl(0, 0%, 90%);
 }
 
-/* SERVICES */ 
+/* PROGRAMS */ 
 
-#services {
+#programs {
     padding: 4rem 0;
 }
-#services .section-title {
+#programs .section-title {
     padding-bottom: 1rem;
     margin-bottom: 2rem;
     border-bottom: 2px solid #8abf5e;
 }
 
-.services-list {
+.programs-list {
     margin: 4rem -4rem 0 -2rem;
     padding: 0;
     list-style: none;
 }
 
-.services-list li {
+.programs-list li {
     display: block;
     color: #404040;
     padding: 2rem;
@@ -59,13 +69,13 @@
                    break-inside: avoid-column;
 }
 
-.services-list li,
-.services-list li a,
-.services-list li h3 {
+.programs-list li,
+.programs-list li a,
+.programs-list li h3 {
     transition: all .5s ease;
 }
 
-.services-list li:hover {
+.programs-list li:hover {
     background: #8abf5e;
 }
 
@@ -80,4 +90,9 @@
 /* CONTACT */
 #ask {
     padding: 4rem 0;
+}
+
+.indent {
+    max-width: 1200px;
+    margin: 0 auto;
 }

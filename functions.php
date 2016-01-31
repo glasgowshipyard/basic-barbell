@@ -45,6 +45,7 @@ function basic_barbell_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary', 'basic-barbell' ),
+		'social' => esc_html__( 'Social Menu', 'basic-barbell' ),
 	) );
 
 	/*
@@ -107,6 +108,25 @@ function basic_barbell_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+        'name' 			=> esc_html__( 'Front Left', 'stephgaudreau' ),
+        'id' 			=> 'front-left',
+        'before_widget' => '<div class="front-left">',
+		'after_widget' 	=> '</div>',
+        'description' 	=> esc_html__( 'Widget for front left on Front Page.', 'stephgaudreau' ),
+        'before_title' 	=> '<h2 class="section-title">',
+        'after_title' 	=> '</h2>',
+    ) );
+    register_sidebar( array(
+        'name' 			=> esc_html__( 'Front Right', 'stephgaudreau' ),
+        'id' 			=> 'front-right',
+        'before_widget' => '<div class="front-right">',
+		'after_widget' 	=> '</div>',
+        'description' 	=> esc_html__( 'Widget for front right on Front Page.', 'stephgaudreau' ),
+        'before_title' 	=> '<h2 class="section-title">',
+        'after_title' 	=> '</h2>',
+    ) );
+
 }
 add_action( 'widgets_init', 'basic_barbell_widgets_init' );
 
@@ -117,14 +137,24 @@ function basic_barbell_scripts() {
 	wp_enqueue_style( 'basic-barbell-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'basic-barbell-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	
+	wp_enqueue_script( 'basic-barbell-scripts', get_stylesheet_directory_uri() . '/js/basicbarbell.js', array('jquery'), '20160130', false);
 
 	wp_enqueue_script( 'basic-barbell-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	
+	wp_enqueue_style('basic-barbell-fontawesome','https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', $in_footer);
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'basic_barbell_scripts' );
+
+function remove_jetpack_styles(){
+wp_deregister_style('grunion.css'); // Grunion contact form
+}
+add_action('wp_print_styles', 'remove_jetpack_styles');
 
 /**
  * Implement the Custom Header feature.

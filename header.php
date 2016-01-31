@@ -26,6 +26,9 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding">
+			<div class="basic_barbell" aria-hidden="true">
+			<div><?php $site_title = get_bloginfo('name');?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" alt="<?php bloginfo( 'name' ); ?>" rel="home">
+				<?php echo substr($site_title, 0, 1); echo substr($site_title, 6, 1); ?>_</a></div></div>
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
@@ -33,6 +36,7 @@
 				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php
 			endif;
+			
 
 			$description = get_bloginfo( 'description', 'display' );
 			if ( $description || is_customize_preview() ) : ?>
@@ -50,7 +54,8 @@
 				wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) );
 				}
 				?>
+				<?php basic_barbell_social_menu(); ?>
 		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+			</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
