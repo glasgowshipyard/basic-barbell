@@ -287,6 +287,8 @@ h1 {
 
 h2 {
   font-family: "NoBiggieOne";
+  text-transform: uppercase;
+  font-size: 1.2em;
 }
 
 p {
@@ -632,18 +634,68 @@ textarea {
 --------------------------------------------------------------*/
 a {
   color: #000000;
+  text-decoration: none;
 }
 a:visited {
-  color: #666666;
+  color: #000000;
 }
 a:hover, a:focus, a:active {
   color: #999999;
+  transition: all .5s ease;
 }
 a:focus {
   outline: thin dotted;
 }
 a:hover, a:active {
   outline: 0;
+}
+
+#page.site a:after {
+  content: "_";
+  color: transparent;
+}
+
+a:hover:after {
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: #999999;
+  }
+}
+.basic_barbell {
+  display: block;
+}
+
+.basic_barbell a:after {
+  color: white !important;
+}
+
+.basic_barbell a:hover {
+  color: white !important;
+  transition: all .5s ease;
+}
+
+.basic_barbell a:hover:after {
+  animation: 1s basic_barbell_blink step-end infinite;
+}
+
+@keyframes "basic_barbell_blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+.menu-social a:after,
+.woocommerce-breadcrumb a:after,
+.programs-list li a:after {
+  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -907,20 +959,18 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.site-title {
+  font-family: "NoBiggieOneBold";
+  position: absolute;
+  top: 1.2em;
+  left: 3.9em;
+}
+
 .content-area {
-  float: left;
-  margin: 0 -25% 0 0;
-  width: 100%;
-}
-
-.site-main {
-  margin: 0 25% 0 0;
-}
-
-.site-content .widget-area {
-  float: right;
-  overflow: hidden;
-  width: 25%;
+  padding-top: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 4rem;
 }
 
 .site-footer {
@@ -1057,7 +1107,14 @@ a:hover, a:active {
 }
 
 .programs-list li:hover {
-  background: #8abf5e;
+  background: #000000;
+}
+
+.programs-list li:hover,
+.programs-list li:hover a,
+.programs-list li:hover a:hover,
+.programs-list li:hover a h3 {
+  color: #ffffff !important;
 }
 
 /* WHO THE FUCK IS THIS GUY*/
@@ -1142,6 +1199,34 @@ object {
   max-width: 100%;
 }
 
+@media screen and (max-width: 1159px) {
+  .site-content .widget-area {
+    width: auto;
+  }
+}
+@media screen and (min-width: 1160px) {
+  .content-area {
+    float: left;
+    margin: 0 -350px 0 0;
+    width: 100%;
+    flex: 2;
+    padding-top: 1rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  .site-main {
+    margin: 0 350px 0 0;
+  }
+
+  .site-content .widget-area {
+    float: right;
+    overflow: hidden;
+    max-width: 350px;
+    flex: 1;
+  }
+}
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
@@ -1202,6 +1287,7 @@ object {
   .programs-lede {
     width: 50%;
     float: left;
+    min-height: 300px;
   }
 }
 @media screen and (min-width: 950px) {

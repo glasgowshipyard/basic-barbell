@@ -76,8 +76,16 @@
 }
 
 .programs-list li:hover {
-    background: #8abf5e;
+    background: #000000;
 }
+
+.programs-list li:hover,
+.programs-list li:hover a,
+.programs-list li:hover a:hover,
+.programs-list li:hover a h3 {
+    color: #ffffff !important;
+}
+
 
 /* WHO THE FUCK IS THIS GUY*/ 
 #who {

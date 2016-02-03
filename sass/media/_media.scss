@@ -14,6 +14,39 @@ object {
 	max-width: 100%;
 }
 
+@media screen and (max-width: 1159px) {
+	.site-content .widget-area {
+		width: auto;
+		}
+}
+
+@media screen and (min-width: 1160px) {
+	
+	.content-area {
+		float: left;
+		margin: 0 (-$size__site-sidebar) 0 0;
+		width: $size__site-main;
+		flex: 2;
+		padding-top: 1rem;
+		padding-left: 4rem;
+		padding-right:4rem;
+		padding-bottom: 4rem;
+	}
+	
+	.site-main {
+		margin: 0 $size__site-sidebar 0 0;
+	}
+	
+	.site-content .widget-area {
+		float: right;
+		overflow: hidden;
+		max-width: $size__site-sidebar;
+		flex: 1;
+		}
+}
+
+
+
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
@@ -77,6 +110,7 @@ object {
     .programs-lede {
         width: 50%;
         float: left;
+        min-height: 300px;
     }
     
 }

@@ -11,14 +11,15 @@ get_header(); ?>
 	?>
 	<div id="primary" class="content-area-front">
 		<main id="main" class="site-main-front" role="main">
+
 		
-		<section id="call-to-action" class="call-to-action-background-image" style="background-image: url(<?php header_image(); ?>)"><!-- This is the header and call to action split -->
+<!--		<section id="call-to-action" class="call-to-action-background-image" style="background-image: url(<?php header_image(); ?>)">
 				<div class="indent">
 					<?php if ( dynamic_sidebar('front-left') ) : else : endif; ?>
 					<?php if ( dynamic_sidebar('front-right') ) : else : endif; ?>
 				</div>
-			</section>
-
+		</section>-->
+	
 		<section id="what">
 				<div class="indent">
 						<?php 
@@ -42,11 +43,11 @@ get_header(); ?>
 				</div><!-- .indent -->
 		</section><!-- #what -->
 		
-		<section id="testimonials">
+	<!--	<section id="testimonials">
 			<div class="indent">
 				Testimonials
 			</div>
-		</section>
+		</section> -->
 		
 		<section id="why">
 				<div class="indent">
