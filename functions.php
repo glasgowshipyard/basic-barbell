@@ -144,7 +144,6 @@ function basic_barbell_scripts() {
 	
 	wp_enqueue_style('basic-barbell-fontawesome','https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', $in_footer);
 
-
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
@@ -160,6 +159,15 @@ function woocommerce_support() {
     add_theme_support( 'woocommerce' );
 }
 add_action( 'after_setup_theme', 'woocommerce_support' );
+
+/**
+ * Get Admin Bar Header Fuckup Tae FUCKIN FUCK
+ */
+add_action('get_header', 'my_filter_head');
+ 
+function my_filter_head() {
+    remove_action('wp_head', '_admin_bar_bump_cb');
+}
 
 /**
  * Implement the Custom Header feature.

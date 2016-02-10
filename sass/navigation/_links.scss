@@ -61,9 +61,31 @@ a:hover:after {
     color: white;
   }
 }
+ //FUCKIN SITE TITLE CHANGES MIT
+ 
+.site-title a:hover {
+	color: $color__link !important;
+}
+
+.site-title a:hover:after {
+	animation: 1s site_title_blink step-end infinite;	
+}
+
+@keyframes "site_title_blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: $color__link;
+  }
+}
 
 .menu-social a:after,
 .woocommerce-breadcrumb a:after,
 .programs-list li a:after{
 	display: none;
+}
+
+.site-footer a {
+	color: #ffffff;
 }

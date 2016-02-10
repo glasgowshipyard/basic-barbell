@@ -45,8 +45,6 @@ object {
 		}
 }
 
-
-
 @media screen and (min-width: 37.5em) {
 	.menu-toggle {
 		display: none;
@@ -55,6 +53,17 @@ object {
 		display: block;
 	}
 }
+
+@media screen and (max-width: 599px) and (min-width: 351px){ 
+	.site-title {
+		font-size: 1.5em;
+		top: 0;
+		text-align: left;
+		left: 5em;
+		max-width: 100px;
+	}
+}
+
 
 @media screen and (max-width: 1539px) and (min-width: 1160px){ 
     .content-area.front {
@@ -76,7 +85,7 @@ object {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 350px) and (min-width: 300px) {
     .indent {
         margin: 0;
     }
@@ -84,6 +93,7 @@ object {
 	     display: none;
      }
 }
+
 @media screen and (min-width: 750px) {
     .front-left {
         width: 50%;
@@ -95,7 +105,7 @@ object {
         width: 50%;
         float: right;
         padding-left: 4rem;
-		text-align: right;
+		//text-align: right;
     }
 }
 
@@ -169,6 +179,17 @@ object {
     #menu-social li a { 
         padding-left:.5em;
         padding-right: .5em;
+    }
+}
+
+/* Footer widgets responsive */
+@media screen and (max-width: 879px) {
+    #footer-widgets { width: 100%!important; }
+    
+    .footer-widgets .widget {
+        float: none;
+        width: 100%;
+        margin: 0 0 8rem;
     }
 }
 
