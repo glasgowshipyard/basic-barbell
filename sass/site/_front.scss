@@ -4,6 +4,12 @@
     float: none;
     padding: 0;
 }
+
+.indent {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* CONTENT AREA */
 .content-area {
 	background: #fff;
@@ -18,7 +24,6 @@
 /*Call to Action*/ 
 #call-to-action {
     color: #fff;
-    padding: 4rem 0;
 }
 
 /*HEADER IMAGE*/
@@ -28,25 +33,21 @@
 	 min-height: 400px;
 }
 
+/*END CALL TO ACTION AND ALL THAT FUCKING SHIT*/ 
+
+/* ALL FONT PAGE CONTAINERS */
+#what, #why, #who, #how, #ask, #testimonials, #programs, #call-to-action {
+	padding: 4rem 0;
+}
 
 /*WHAT*/ 
 #what {
     color: #fff;
-    background: #404040;
-    padding: 4rem 0;
-}
-
-/* TESTIMONIALS */
-#testimonials {
-    padding: 4rem 0;
-    background: hsl(0, 0%, 90%);
+    background: #404040;  
 }
 
 /* PROGRAMS */ 
 
-#programs {
-    padding: 4rem 0;
-}
 #programs .section-title {
     padding-bottom: 1rem;
     margin-bottom: 2rem;
@@ -85,20 +86,4 @@
 .programs-list li:hover a h3 {
     color: #ffffff !important;
 }
-
-
-/* WHO THE FUCK IS THIS GUY*/ 
-#who {
-    padding-top: 4rem;
-    padding-bottom: 6rem;
-}
-
-/* CONTACT */
-#ask {
-    padding: 4rem 0;
-}
-
-.indent {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+/* END PROGRAMS AND ALL THE SHIT IN IT */ 

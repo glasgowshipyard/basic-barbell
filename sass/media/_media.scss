@@ -72,12 +72,6 @@ object {
     }
 }
 
-.indent {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-
 @media screen and (max-width: 1099px) {
     .indent {
         margin: 0;
@@ -166,9 +160,6 @@ object {
 	
 .main-navigation ul ul a { width: 100%; }
 
-} // End responsive menu
-
-@media screen and (max-width: 600px) {
     #menu-social ul {
 	    position: absolute;
         top: 0;
@@ -180,7 +171,36 @@ object {
         padding-left:.5em;
         padding-right: .5em;
     }
+    
+body,
+button,
+input,
+select,
+textarea {
+	font-size: 16px;
+	}
+.site-branding {
+	@include font-size(1); //ENSURES CORRECT SPACING IN HEADER//
 }
+
+.contact-form select { font-size: 10px; }
+
+
+} // End responsive menu
+
+//@media screen and (max-width: 600px) {
+//    #menu-social ul {
+//	    position: absolute;
+//        top: 0;
+//        right: 1rem;
+//        display: block;
+//    }
+//    
+//    #menu-social li a { 
+//        padding-left:.5em;
+//        padding-right: .5em;
+//    }
+//}
 
 /* Footer widgets responsive */
 @media screen and (max-width: 879px) {

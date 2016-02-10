@@ -1174,6 +1174,11 @@ a:hover:after {
   padding: 0;
 }
 
+.indent {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* CONTENT AREA */
 .content-area {
   background: #fff;
@@ -1188,7 +1193,6 @@ a:hover:after {
 /*Call to Action*/
 #call-to-action {
   color: #fff;
-  padding: 4rem 0;
 }
 
 /*HEADER IMAGE*/
@@ -1198,24 +1202,19 @@ a:hover:after {
   min-height: 400px;
 }
 
+/*END CALL TO ACTION AND ALL THAT FUCKING SHIT*/
+/* ALL FONT PAGE CONTAINERS */
+#what, #why, #who, #how, #ask, #testimonials, #programs, #call-to-action {
+  padding: 4rem 0;
+}
+
 /*WHAT*/
 #what {
   color: #fff;
   background: #404040;
-  padding: 4rem 0;
-}
-
-/* TESTIMONIALS */
-#testimonials {
-  padding: 4rem 0;
-  background: #e6e6e6;
 }
 
 /* PROGRAMS */
-#programs {
-  padding: 4rem 0;
-}
-
 #programs .section-title {
   padding-bottom: 1rem;
   margin-bottom: 2rem;
@@ -1255,22 +1254,7 @@ a:hover:after {
   color: #ffffff !important;
 }
 
-/* WHO THE FUCK IS THIS GUY*/
-#who {
-  padding-top: 4rem;
-  padding-bottom: 6rem;
-}
-
-/* CONTACT */
-#ask {
-  padding: 4rem 0;
-}
-
-.indent {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
+/* END PROGRAMS AND ALL THE SHIT IN IT */
 .basic_barbell {
   font-family: "NoBiggieOneBold", "Anvylon", Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   font-size: 38px;
@@ -1393,11 +1377,6 @@ object {
     padding-left: 0;
   }
 }
-.indent {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
 @media screen and (max-width: 1099px) {
   .indent {
     margin: 0;
@@ -1482,8 +1461,7 @@ object {
   .main-navigation ul ul a {
     width: 100%;
   }
-}
-@media screen and (max-width: 600px) {
+
   #menu-social ul {
     position: absolute;
     top: 0;
@@ -1494,6 +1472,22 @@ object {
   #menu-social li a {
     padding-left: .5em;
     padding-right: .5em;
+  }
+
+  body,
+  button,
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  .site-branding {
+    font-size: 19px;
+  }
+
+  .contact-form select {
+    font-size: 10px;
   }
 }
 /* Footer widgets responsive */
